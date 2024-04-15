@@ -35,7 +35,7 @@
 }
 
 #message {
-    width: 40%;
+    width: 30%;
 }
 
 .alert.alert-light p {
@@ -65,7 +65,7 @@
     transition: 1s ease-in-out;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
     .nav-link::before {
         content: "";
         position: absolute;
@@ -112,13 +112,7 @@ body {
 }
 
 /* About Start */
-
-.body-about {
-    background-color: var(--bg-blue);
-
-}
-
-.text-about {
+.text-about, .textoCard{
     text-align: justify;
 }
 
@@ -132,6 +126,8 @@ body {
 
 .body-form {
     margin-top: -15px;
+    width: 100%;
+    height: 100%;
     background-color: #101522;
 }
 
@@ -150,3 +146,13 @@ body {
 }
 
 /* Form End */
+
+/* Back to Top */
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}

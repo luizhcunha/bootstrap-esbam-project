@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/index.css">
@@ -46,7 +47,7 @@
               <a class="nav-link active" aria-current="page" href="#">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link main-event-text" href="#">Evento Principal</a>
+              <a class="nav-link main-event-text" id="btnMainEvent" href="#">Evento Principal</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Outros Eventos</a>
@@ -54,8 +55,6 @@
           </ul>
         </div>
       </div>
-
-      <a class="register-button" href="#">Inscrição</a>
       <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -75,9 +74,8 @@
           reuniões verdadeiramente memoráveis.<br>Combinamos a nossa criatividade, profissionalismo e atenção aos
           detalhes para
           entregar experiências únicas e personalizadas para cada cliente.</p>
-        <img class="img-fluid mx-md-auto mx-sm-auto d-block img-about"
-          src="https://i.pinimg.com/564x/0c/36/de/0c36de30793df1f6bbb36f3e8508b67b.jpg" alt="section image 'quem somos'"
-          width="350px" height="300px">
+        <img class="img-fluid mx-md-auto mx-sm-auto d-block img-about mb-3"
+          src="./assets/images/backgrounds/img-about.jpg" alt="section image 'quem somos'" width="320px" height="280px">
       </div>
     </div>
   </div>
@@ -90,54 +88,56 @@
     </div>
 
     <!-- Card Container Start -->
-
     <section class="container">
-      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 g-4 justify-content-center"> <!-- Row -->
+      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 g-4 justify-content-center flex-wrap mh-100">
+        <!-- Row -->
 
         <div class="col"> <!-- Imagem 1 -->
-          <div class="card">
+          <div class="card h-100">
             <img src="https://i.pinimg.com/564x/0c/36/de/0c36de30793df1f6bbb36f3e8508b67b.jpg" class="card-img-top"
               alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title text-center">Personalização e Branding</h5>
+              <p class="card-text mt-3 textoCard">Destaque sua identidade e impressione sua audiência com personalização
+                e o seu branding exclusivos em cada evento.
+                Deixe sua marca se destacar com EVEnts.</p>
             </div>
           </div>
         </div> <!-- Fim da Imagem 1 -->
 
         <div class="col"> <!-- Imagem 2 -->
-          <div class="card">
+          <div class="card h-100">
             <img src="https://i.pinimg.com/564x/0c/36/de/0c36de30793df1f6bbb36f3e8508b67b.jpg" class="card-img-top"
               alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title text-center">Suporte e Assistência 24/7</h5>
+              <p class="card-text textoCard mt-3">Estamos aqui para ajudar em cada passo do seu evento. Conte com nosso
+                suporte e assistência para garantir uma experiência impecável para você e seus participantes.</p>
             </div>
           </div>
         </div> <!-- Fim da Imagem 2 -->
 
         <div class="col"> <!-- Imagem 3 -->
-          <div class="card">
+          <div class="card h-100">
             <img src="https://i.pinimg.com/564x/0c/36/de/0c36de30793df1f6bbb36f3e8508b67b.jpg" class="card-img-top"
               alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title text-center">Acesso Global para você</h5>
+              <p class="card-text mt-3 textoCard">Alcance o mundo inteiro e ofereça opções flexíveis de participação com
+                EVEnts. Seja presencial ou online, conecte-se com uma audiência global e amplie o alcance dos seus
+                eventos.</p>
             </div>
           </div>
         </div> <!-- Fim da Imagem 3 -->
 
         <div class="col"> <!-- Imagem 4 -->
-          <div class="card">
+          <div class="card h-100">
             <img src="https://i.pinimg.com/564x/0c/36/de/0c36de30793df1f6bbb36f3e8508b67b.jpg" class="card-img-top"
               alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title text-center">Fácil Gerenciamento</h5>
+              <p class="card-text mt-3 textoCard">Facilite o planejamento e a execução de seus eventos com nossas
+                poderosas ferramentas de gerenciamento de eventos.</p>
             </div>
           </div>
         </div> <!-- Fim da Imagem 4 -->
@@ -155,41 +155,51 @@
   <!-- "What we offer?" End -->
 
   <!-- Form Start -->
-  <div class="container-fluid body-form">
+  <div class="container-fluid body-form pb-5">
     <div class="container-md p-3">
       <h1 class="display-5 text-center text-primary">Faça sua inscrição hoje!</h1>
     </div>
 
     <section class="container">
-      <form action="" id="address-form" class="form-body p-3 rounded-3">
+      <form action="" method="get" id="address-form" class="form-body p-3 rounded-3">
         <legend>Informações Pessoais</legend>
         <fieldset>
 
           <div class="row g-3">
             <div class="col-md-6">
               <label for="inputName" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="inputName" required>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+                <input type="text" class="form-control" id="inputName" required>
+              </div>
             </div>
 
             <div class="col-md-6">
               <label for="inputSurname" class="form-label">Sobrenome</label>
-              <input type="text" class="form-control" id="inputSurname" required>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+                <input type="text" class="form-control" id="inputSurname" required>
+              </div>
             </div>
 
             <div class="col-md-6">
               <label for="inputEmail" class="form-label">Email</label>
               <div class="input-group">
-                <input type="email" class="form-control" id="inputEmail1">
-                <span class="input-group-text">@</span>
-                <input type="email" class="form-control" id="inputEmail2" required>
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+                <input type="email" class="form-control" id="inputEmail" required>
               </div>
             </div>
 
             <div class="col-md-6">
               <label for="inputTel" class="form-label">Contato (WhatsApp)</label>
-              <input type="text" class="form-control" id="inputPhoneNumber" placeholder="(DDD) XXXX-XXXX" required>
+              <input type="text" class="form-control" id="inputPhoneNumber" placeholder="(DD) XXXXX-XXXX" required>
             </div>
-
 
             <legend class="mt-5">Informações do Evento</legend>
 
@@ -211,8 +221,9 @@
             <div class="row g-3" id="container-presencial-checked" hidden> <!-- Formulário de Evento Presencial -->
 
               <div class="col-md-12">
-                <label for="inputCEP" class="form-label">Insira o CEP do Evento Presencial</label>
-                <input type="text" placeholder="(apenas números)" id="inputCEP" class="form-control" minlength="8" maxlength="8" required>
+                <label for="inputCEP" class="form-label">Insira o CEP do Evento Presencial *</label>
+                <input type="text" placeholder="(apenas números)" id="inputCEP" class="form-control" minlength="8"
+                  maxlength="8" required>
               </div>
 
               <div class="col-md-6"> <!-- Input do Estado -->
@@ -220,8 +231,8 @@
                 <div class="input-group mb-3">
                   <label class="input-group-text" for="inputGroupEstado">Em qual <strong
                       class="mx-1 fw-normal text-decoration-underline">estado</strong> será:</label>
-                  <select class="form-control text-uppercase text-lg-center rounded-end-2"
-                    id="inputEstado" disabled data-input> 
+                  <select class="form-control text-uppercase text-lg-center rounded-end-2" id="inputEstado" disabled
+                    data-input>
                     <option selected hidden></option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -253,22 +264,34 @@
                   </select>
                 </div>
               </div>
-  
+
               <div class="col-md-6"> <!-- Input da Cidade -->
                 <label for="inputGroupCidade" class="form-label">Cidade do Evento</label>
                 <div class="input-group mb-3">
                   <label class="input-group-text">Em qual <strong
                       class="mx-1 fw-normal text-decoration-underline">cidade</strong>será:</label>
-                  <input id="inputCidade" class="form-control text-capitalize text-lg-center rounded-end-2" disabled data-input>
+                  <input id="inputCidade" class="form-control text-capitalize text-lg-center rounded-end-2" disabled
+                    data-input>
                 </div>
               </div>
 
-              <div class="col-md-6"> <!-- Input da Rua -->
+              <div class="col-md-8"> <!-- Input da Rua -->
                 <label for="inputGroupCidade" class="form-label">Rua do Evento</label>
                 <div class="input-group mb-3">
                   <label class="input-group-text">Em qual <strong
                       class="mx-1 fw-normal text-decoration-underline">rua</strong>será:</label>
-                  <input id="inputRua" class="form-control text-capitalize text-lg-center rounded-end-2" disabled data-input>
+                  <input id="inputRua" class="form-control text-capitalize text-lg-center rounded-end-2" disabled
+                    data-input>
+                </div>
+              </div>
+
+              <div class="col-md-4"> <!-- Input do Bairro -->
+                <label for="inputGroupCidade" class="form-label">Nº da Rua</label>
+                <div class="input-group mb-3">
+                  <label class="input-group-text">Qual o<strong
+                      class="mx-1 fw-normal text-decoration-underline">Nº</strong>:</label>
+                  <input id="inputNRua" class="form-control text-capitalize text-lg-center rounded-end-2" required
+                    disabled data-input>
                 </div>
               </div>
 
@@ -277,47 +300,135 @@
                 <div class="input-group mb-3">
                   <label class="input-group-text">Em qual <strong
                       class="mx-1 fw-normal text-decoration-underline">bairro</strong>será:</label>
-                  <input id="inputBairro" class="form-control text-capitalize text-lg-center rounded-end-2" disabled data-input> 
+                  <input id="inputBairro" class="form-control text-capitalize text-lg-center rounded-end-2" disabled
+                    data-input>
                 </div>
               </div>
-  
-              <div class="col-md-6"> <!-- Dia do Evento -->
-                <label for="inputDate" class="form-label">Dia do Evento</label>
-                <input type="date" class="form-control" id="inputDate">
-              </div>
-  
-              <div class="col-md-6"> <!-- Dia do Evento -->
-                <label for="inputHour" class="form-label">Hora do Evento</label>
-                <input type="time" class="form-control" id="inputDate">
-              </div>
 
+              <div class="col-md-6"> <!-- Input do Complemento -->
+                <label for="inputGroupCidade" class="form-label">Complemento do Local</label>
+                <div class="input-group mb-3">
+                  <label class="input-group-text">Adicione um <strong
+                      class="mx-1 fw-normal text-decoration-underline">complemento</strong>:</label>
+                  <input id="inputComplemento" class="form-control text-capitalize text-lg-center rounded-end-2"
+                    disabled data-input>
+                </div>
+              </div>
+            </div> <!-- Fim do Formulario Caso Seja Presencial -->
+
+            <div class="row g-3" id="container-online-checked" hidden> <!-- Formulario Caso Seja Online -->
+              <div class="col-md-12">
+                <label class="form-label">Endereço WEB do Evento</label>
+                <input type="url" class="form-control" id="inputUrlEvent">
+              </div>
             </div>
 
-            <div class="row g-3" id="container-online-checked" hidden>
-              AAAAAAAAAA
+            <div class="col-md-6"> <!-- Dia do Evento -->
+              <label for="inputDate" class="form-label">Dia do Evento *</label>
+              <input type="date" class="form-control" id="inputDate" required>
             </div>
-            
-            
+
+            <div class="col-md-6"> <!-- Dia do Evento -->
+              <label for="inputHour" class="form-label">Hora do Evento *</label>
+              <input type="time" class="form-control" id="inputDate">
+            </div>
+
+            <legend class="mt-5">Informações Adicionais</legend>
+
+            <div class="col-md-6">
+              <label class="form-label">Nome do evento</label>
+              <input type="text" class="form-control" id="inputNomeEvento" placeholder="Nome do evento" max="10" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Tipo de evento</label>
+              <select class="form-select" required>
+                <option value="" disabled selected>Selecione o tipo de evento</option>
+                <option value="conferencia">Conferência</option>
+                <option value="workshop">Workshop</option>
+                <option value="palestra">Palestra</option>
+                <option value="exposicao">Exposição</option>
+                <option value="networking">Networking Event</option>
+              </select>
+            </div>
+
+            <div class="col-md-12">
+              <label class="form-label">Descrição do evento</label>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Descrição aqui" id="inputDescricaoEvento"
+                  style="height: 100px" minlength="20"></textarea>
+                <label for="floatingTextarea2">Insira aqui a descrição do evento</label>
+              </div>
+            </div>
+
+            <button type="submit" id="submit" class="btn btn-primary">Inscrever</button>
           </div>
 
         </fieldset>
       </form>
     </section>
-  </div>
+  </div> <!-- Form End -->
+
+  <!-- Footer Start -->
+
+  <footer class="container-fluid bg-dark footer pt-5">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-3">
+          <img class="navbar-brand me-auto img-svg" src="./assets/images/logo-svg.svg" alt="" width="60" height="50">
+          <p class="text-white-50 pt-2">Transformando ideias em experiências memoráveis - EVEnts</p>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5>Nos contate!</h5>
+          <p class="text-white-50">
+            <i class="bi bi-geo-alt-fill me-3"></i>
+            Manaus, AM - Brasil
+          </p>
+
+          <p class="text-white-50">
+            <i class="bi bi-envelope-fill me-3"></i>
+            <a href="#">Contato com o suporte.</a>
+          </p>
+
+          <p class="text-white-50">
+            <i class="bi bi-github me-3"></i>
+            <a style="text-decoration: none;" class="text-white-50"
+              href="https://github.com/luizhcunha/bootstrap-esbam-project">Feito por Luiz Henrique</a>
+          </p>
+        </div>
 
 
+
+        <div class="col-md-6 col-lg-3"">
+            <a href=" https://borgonove.tech/index.html" class="d-inline-block mb-3" target="_blank">
+          <img src="./assets/images/logob9branco.png" width="220px" alt="logo b9 tech">
+          </a>
+          <p class="text-white-50 pt-2">Inovando para conectar o futuro: desenvolvemos soluções que transformam visões
+            em realidade.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer> <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-outline-primary back-to-top pt-2" style="display: none;">
+    <i class="bi bi-chevron-double-up" "=""></i>
+    Voltar ao Topo
+  </a>
 
 
 
   <!-- NÃO MEXER ABAIXO DISSO -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 <script src="./src/index.js"></script>
 
