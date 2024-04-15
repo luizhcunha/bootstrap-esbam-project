@@ -12,10 +12,17 @@ const rua = localStorage.getItem('rua')
 const bairro = localStorage.getItem('bairro')
 const complemento = localStorage.getItem('complemento')
 
-console.log(nome, sobrenome, email, telefone, nomeEvento, descricaoEvento, cep, estado, cidade, rua, bairro, complemento);
+const dataComoString = localStorage.getItem('dataEvento')
+
+const nomeCompleto = nome + " " + sobrenome;
+
+console.log(nomeCompleto);
+
+console.log(dataComoString);
 
 const textoNomeEvento = document.querySelector('#nomeEvento')
 const textoDescricaoEvento = document.querySelector('#descricaoEvento')
+const textoIdealizador = document.querySelector("#idealizadorEvento")
 
 // Textos de Contato
 const textoContatoTelefone = document.querySelector("#contatoEventoZap");
@@ -29,9 +36,12 @@ const textoRua = document.querySelector("#ruaEvento");
 const textoBairro = document.querySelector("#bairroEvento");
 const textoComplemento = document.querySelector("#complementoEvento");
 
+
 // Inserindo no HTMl
 textoNomeEvento.innerHTML = nomeEvento;
 textoDescricaoEvento.innerHTML = descricaoEvento;
+
+textoIdealizador.innerHTML = nomeCompleto;
 
 textoContatoTelefone.value = telefone;
 textoContatoEmail.value = email;
@@ -42,3 +52,4 @@ textoCidade.value = cidade;
 textoRua.value = rua;
 textoBairro.value = bairro;
 textoComplemento.value = complemento;
+

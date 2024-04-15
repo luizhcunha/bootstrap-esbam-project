@@ -63,85 +63,166 @@
     </nav>
     <!-- Navbar End -->
 
-    <h1 class="display-5 text-center pt-2">Seu evento aqui</h1>
-
     <!-- About Event Start -->
-  <div class="container-fluid body-about">
-    <div class="container p-3">
-      <div class="container">
-        <h1 class="display-4 text-body-emphasis text-lg-start text-sm-center" id="nomeEvento"></h1>
-      </div>
-      <div class="container d-lg-flex justify-content-end align-items-lg-center gap-5">
-        <p class="fs-4 text-about" id="descricaoEvento">Somos uma equipe apaixonada por eventos, dedicada a tornar suas celebrações e
-          reuniões verdadeiramente memoráveis.<br>Combinamos a nossa criatividade, profissionalismo e atenção aos
-          detalhes para
-          entregar experiências únicas e personalizadas para cada cliente.</p>
-        <img class="img-fluid mx-md-auto mx-sm-auto d-block img-about mb-3"
-          src="../assets/images/img-about-event.jpeg" alt="section image 'quem somos'" width="250px" height="200px">
-      </div>
-    </div>
-  </div>
-  <!-- About Event End -->
-
-
-
-  <!-- Location Event Start -->
-
-  <div class="container-fluid bg-primary">
-    <div class="container p-3">
-        <div class="container">
-            <h1 class="display-3 text-body-emphasis text-center">Localização do Evento</h1>
+    <div class="container-fluid body-about">
+        <div class="container p-3">
+            <div class="container">
+                <h1 class="display-4 text-body-emphasis text-lg-start text-sm-center" id="nomeEvento"></h1>
+            </div>
+            <div class="container d-lg-flex justify-content-end align-items-lg-center gap-5">
+                <p class="fs-1 text-about" id="descricaoEvento">Somos uma equipe apaixonada por eventos, dedicada a
+                    tornar suas celebrações e
+                    reuniões verdadeiramente memoráveis.<br>Combinamos a nossa criatividade, profissionalismo e atenção
+                    aos
+                    detalhes para
+                    entregar experiências únicas e personalizadas para cada cliente.</p>
+                <img class="img-fluid mx-md-auto mx-sm-auto d-block img-about mb-3"
+                    src="../assets/images/img-about-event.jpeg" alt="section image 'quem somos'" width="250px"
+                    height="200px">
+            </div>
         </div>
-        <div class="form-body p-3 rounded-3 pb-5">
-            <legend class="mt-2">Contato do Evento</legend>
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">Contato por WhatsApp</label>
-                    <input type="text" class="form-control" id="contatoEventoZap" value="" disabled>
-                </div>
+    </div>
+    <!-- About Event End -->
 
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">Contato por E-mail</label>
-                    <input type="text" class="form-control" id="contatoEventoEmail" value="" disabled>
-                </div>
-
-                <legend class="mt-4">Localização do Evento</legend>
-                
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">CEP</label>
-                    <input type="text" class="form-control" id="cepEvento" value="" disabled>
-                </div>
-
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">Estado</label>
-                    <input type="text" class="form-control" id="estadoEvento" value="" disabled>
-                </div>
-
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="cidadeEvento" value="" disabled>
-                </div>
-
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">Rua</label>
-                    <input type="text" class="form-control" id="ruaEvento" value="" disabled>
-                </div>
-
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">Bairro</label>
-                    <input type="text" class="form-control" id="bairroEvento" value="" disabled>
-                </div>
-
-                <div class="col-md-6">
-                    <label for="inputTel" class="form-label">Complemento</label>
-                    <input type="text" class="form-control" id="complementoEvento" value="" disabled>
+    <div class="container-fluid body-form">
+        <div class="container py-5 p-3 mh-100">
+            <h1 class="display-3 text-body-emphasis mb-3 text-center">Idealizador(a) do Evento</h1>
+            <div class="card mx-auto" style="width: 20rem;">
+                <img src="../assets/images/idealizador.jpeg" class="card-img-top img-fluid" alt="..." width="250px"
+                    height="200px">
+                <div class="card-body">
+                    <h1 class="card-title" id="idealizadorEvento"></h1>
+                    <p class="card-text">Uma pessoa muito gente boa e da curtição!</p>
                 </div>
             </div>
         </div>
     </div>
-  </div>
+    </div>
+
+    <!-- Location Event Start -->
+
+    <div class="container-fluid bg-primary">
+        <div class="container p-3">
+            <div class="container">
+                <h1 class="display-3 text-body-emphasis text-center">Localização do Evento</h1>
+            </div>
+            <div class="form-body p-3 rounded-3 pb-5">
+                <legend class="mt-2">Contato do Evento</legend>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Contato por WhatsApp</label>
+                        <input type="text" class="form-control" id="contatoEventoZap" value="" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Contato por E-mail</label>
+                        <input type="text" class="form-control" id="contatoEventoEmail" value="" disabled>
+                    </div>
+
+                    <legend class="mt-4">Localização do Evento</legend>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="cepEvento" value="" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Estado</label>
+                        <input type="text" class="form-control" id="estadoEvento" value="" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidadeEvento" value="" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Rua</label>
+                        <input type="text" class="form-control" id="ruaEvento" value="" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="bairroEvento" value="" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Complemento</label>
+                        <input type="text" class="form-control" id="complementoEvento" value="" disabled>
+                    </div>
+
+                    <legend class="mt-4">Informações do Evento</legend>
+
+                    <div class="col-md-12">
+                        <label for="inputTel" class="form-label">Por onde acontecerá o evento</label>
+                        <input type="text" class="form-control bg-primary" value="Presencialmente!" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Dia do evento</label>
+                        <input type="text" class="form-control bg-primary" id="diaEvento" value="" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputTel" class="form-label">Hora do evento</label>
+                        <input type="text" class="form-control bg-primary" id="horaEvento" value="" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer Start -->
+
+<footer class="container-fluid bg-dark footer pt-5">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-3">
+          <img class="navbar-brand me-auto img-svg" src="../assets/images/logo-svg.svg" alt="" width="60" height="50">
+          <p class="text-white-50 pt-2">Transformando ideias em experiências memoráveis - EVEnts</p>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5>Nos contate!</h5>
+          <p class="text-white-50">
+            <i class="bi bi-geo-alt-fill me-3"></i>
+            Manaus, AM - Brasil
+          </p>
+
+          <p class="text-white-50">
+            <i class="bi bi-envelope-fill me-3"></i>
+            <a href="#">Contato com o suporte.</a>
+          </p>
+
+          <p class="text-white-50">
+            <i class="bi bi-github me-3"></i>
+            <a style="text-decoration: none;" class="text-white-50"
+              href="https://github.com/luizhcunha/bootstrap-esbam-project">Feito por Luiz Henrique</a>
+          </p>
+        </div>
+
+
+
+        <div class="col-md-6 col-lg-3"">
+            <a href="https://borgonove.tech/index.html" class="d-inline-block mb-3" target="_blank">
+          <img src="../assets/images/logob9branco.png" width="220px" alt="logo b9 tech">
+          </a>
+          <p class="text-white-50 pt-2">Inovando para conectar o futuro: desenvolvemos soluções que transformam visões
+            em realidade.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer> <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-outline-primary back-to-top pt-2" style="display: none;">
+    <i class="bi bi-chevron-double-up" "=""></i>
+    Voltar ao Topo
+  </a>
 
 </body>
 
 <script src="../src/eventocriado.js"></script>
+
 </html>

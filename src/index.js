@@ -14,6 +14,8 @@ const inputComplemento = document.querySelector("#inputComplemento");
 const inputurlEvento = document.querySelector("#inputUrlEvent");
 const inputNomeEvento = document.querySelector("#inputNomeEvento");
 const inputDescricaoEvento = document.querySelector("#inputDescricaoEvento");
+const inputDiaEvento = document.querySelector("#inputDiaEvento");
+const inputHoraEvento = document.querySelector("#inputHoraEvento");
 const formInputs = document.querySelectorAll("[data-input]");
 
 // API ViaCEP
@@ -28,7 +30,7 @@ const containerPresencial = document.getElementById("container-presencial-checke
 const containerOnline = document.getElementById("container-online-checked");
 
 // Verificar o input do CEP
-inputCEP.addEventListener("keypress", (e) => {
+inputCEP.addEventListener("keypress", function (e) {
     const onlyNumbers = /[0-9]/;
     const key = e.key;
 
@@ -40,7 +42,7 @@ inputCEP.addEventListener("keypress", (e) => {
 });
 
 // Evento para pegar o endereço
-inputCEP.addEventListener("keyup", (e) => {
+inputCEP.addEventListener("keyup", function (e) {
     const inputValue = e.target.value;
 
     // Checar a quantidade correta de caracteres
@@ -50,7 +52,7 @@ inputCEP.addEventListener("keyup", (e) => {
 });
 
 // Pegar o endereço digitado diretamente da API
-const getAddress = async (cep) => {
+const getAddress = async function (cep) {
     toggleLoader();
     inputCEP.blur();
 
@@ -90,20 +92,20 @@ const getAddress = async (cep) => {
 };
 
 // Alternar campos do formulário entre habilitado e desabilitado
-const toggleDisabled = () => {
+const toggleDisabled = function () {
     if (inputEstado.hasAttribute("disabled")) {
-        formInputs.forEach((input) => {
+        formInputs.forEach(function (input) {
             input.removeAttribute("disabled");
         });
     } else {
-        formInputs.forEach((input) => {
+        formInputs.forEach(function (input) {
             input.setAttribute("disabled", "disabled");
         });
     }
 };
 
 // Alternar exibição do loader
-const toggleLoader = () => {
+const toggleLoader = function () {
     const loaderElement = document.querySelector("#loader");
 
     fadeElement.classList.toggle("hide");
@@ -111,7 +113,7 @@ const toggleLoader = () => {
 };
 
 // Alternar exibição da mensagem
-const toggleMessage = (msg) => {
+const toggleMessage = function (msg) {
     const messageElement = document.querySelector('#message');
     const messageElementText = document.querySelector('#message p');
 
@@ -122,25 +124,22 @@ const toggleMessage = (msg) => {
 };
 
 // Fechar mensagem de erro
-closeButton.addEventListener("click", () => toggleMessage());
+closeButton.addEventListener("click", function () {
+    toggleMessage();
+});
 
 // Submissão do formulário de endereço
-addressForm.addEventListener("submit", (e) => {
+addressForm.addEventListener("submit", function (e) {
     e.preventDefault();
     toggleLoader();
 
     // Armazena os dados do evento na sessão da web
-
     if (presencialInput.checked) {
         // Pegue os valores dos campos do formulário
         const nome = document.getElementById('inputName').value;
         const sobrenome = document.getElementById('inputSurname').value;
         const email = document.getElementById('inputEmail').value;
         const telefone = document.getElementById('inputPhoneNumber').value;
-
-        // Localização do Evento
-        const cep = inputCEP.value;
-        const estado = inputEstado.value;
 
         const nomeEvento = inputNomeEvento.value;
         const descricaoEvento = inputDescricaoEvento.value;
@@ -161,14 +160,28 @@ addressForm.addEventListener("submit", (e) => {
         localStorage.setItem('bairro', inputBairro.value);
         localStorage.setItem('complemento', inputComplemento.value);
 
+        const inputDiaEvento = new Date();
+
+        const dia = inputDiaEvento.getDate();
+        const mes = inputDiaEvento.getMonth() + 1; // Mês começa do zero, então adicionamos 1
+        const ano = inputDiaEvento.getFullYear();
+
+        const horas = inputDiaEvento.getHours();
+        const minutos = inputDiaEvento.getMinutes();
+        const segundos = inputDiaEvento.getSeconds();
+
+        // Formatar a data como uma string
+        const dataComoString = `${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
+
+        localStorage.setItem('dataEvento', dataComoString);
     }
 
-    setTimeout(() => {
-            toggleLoader();
-            toggleMessage("Informações adicionadas com sucesso!\nIndo para o seu evento...");
+    setTimeout(function () {
+        toggleLoader();
+        toggleMessage("Informações adicionadas com sucesso!\nIndo para o seu evento...");
     }, 500);
 
-    setTimeout(() => {
+    setTimeout(function () {
         addressForm.reset();
         toggleDisabled();
         window.location.href = './pages/eventocriado.html';
