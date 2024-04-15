@@ -14,6 +14,7 @@ const inputComplemento = document.querySelector("#inputComplemento");
 const inputurlEvento = document.querySelector("#inputUrlEvent");
 const inputNomeEvento = document.querySelector("#inputNomeEvento");
 const inputDescricaoEvento = document.querySelector("#inputDescricaoEvento");
+const inputTipoEvento = document.querySelector("#inputTipoEvento")
 const inputDiaEvento = document.querySelector("#inputDiaEvento");
 const inputHoraEvento = document.querySelector("#inputHoraEvento");
 const formInputs = document.querySelectorAll("[data-input]");
@@ -30,7 +31,7 @@ const containerPresencial = document.getElementById("container-presencial-checke
 const containerOnline = document.getElementById("container-online-checked");
 
 // Verificar o input do CEP
-inputCEP.addEventListener("keypress", function (e) {
+inputCEP, inputNRua.addEventListener("keypress", function (e) {
     const onlyNumbers = /[0-9]/;
     const key = e.key;
 
@@ -40,6 +41,34 @@ inputCEP.addEventListener("keypress", function (e) {
         return;
     }
 });
+
+inputDiaEvento.addEventListener('change', atualizarDataEvento);
+inputHoraEvento.addEventListener('change', atualizarDataEvento);
+
+// Função para atualizar e armazenar a data do evento
+function atualizarDataEvento() {
+    // Obter os valores dos inputs de dia e hora do evento
+    const dia = inputDiaEvento.value;
+    const hora = inputHoraEvento.value;
+
+    // Dividir a data em partes (ano, mês, dia)
+    const [ano, mes, diaInput] = dia.split('-');
+
+    // Criar um novo objeto Date com a data fornecida
+    const dataEvento = new Date(ano, mes - 1, diaInput); // Mês é base 0, então subtrai 1
+
+    // Obter o dia, mês e ano da data do evento
+    const diaFormatado = dataEvento.getDate().toString().padStart(2, '0'); // Dia com 2 dígitos
+    const mesFormatado = (dataEvento.getMonth() + 1).toString().padStart(2, '0'); // Mês com 2 dígitos
+    const anoFormatado = dataEvento.getFullYear();
+
+    // Formatar a data no formato dd/mm/aaaa
+    const dataFormatada = `${diaFormatado}/${mesFormatado}/${anoFormatado}`;
+
+    // Combinar a data formatada com a hora e armazenar no localStorage
+    localStorage.setItem('dataEvento', `${dataFormatada} às ${hora} horas (horário de ${inputEstado.value})`);
+}
+
 
 // Evento para pegar o endereço
 inputCEP.addEventListener("keyup", function (e) {
@@ -152,6 +181,7 @@ addressForm.addEventListener("submit", function (e) {
 
         localStorage.setItem('nomeEvento', nomeEvento);
         localStorage.setItem('descricaoEvento', descricaoEvento);
+        localStorage.setItem('tipoEvento', inputTipoEvento.value);
 
         localStorage.setItem('cep', inputCEP.value);
         localStorage.setItem('estado', inputEstado.value);
@@ -159,21 +189,6 @@ addressForm.addEventListener("submit", function (e) {
         localStorage.setItem('rua', inputRua.value);
         localStorage.setItem('bairro', inputBairro.value);
         localStorage.setItem('complemento', inputComplemento.value);
-
-        const inputDiaEvento = new Date();
-
-        const dia = inputDiaEvento.getDate();
-        const mes = inputDiaEvento.getMonth() + 1; // Mês começa do zero, então adicionamos 1
-        const ano = inputDiaEvento.getFullYear();
-
-        const horas = inputDiaEvento.getHours();
-        const minutos = inputDiaEvento.getMinutes();
-        const segundos = inputDiaEvento.getSeconds();
-
-        // Formatar a data como uma string
-        const dataComoString = `${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
-
-        localStorage.setItem('dataEvento', dataComoString);
     }
 
     setTimeout(function () {

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Variables */
 :root {
     --bg-blue: #0C111C;
     --nav-text-color: #B2B3BD;
@@ -10,8 +11,7 @@
     --spinner-color: 
 }
 
-/* Spinner&Loader Start */
-
+/*** Spinner & Loader ***/
 #fade {
     position: fixed;
     top: 0;
@@ -43,22 +43,19 @@
     padding: 1.2em 0;
 }
 
-/* Spinner End */
-
-/* NavBar Start */
-
+/* Navbar */
 .navtop {
     background-color: var(--bg-blue);
 }
 
-.nav-link{
+.nav-link {
     color: var(--nav-text-color);
     font-weight: 500;
     position: relative;
     font-family: 'Poppins', sans-serif;
 }
 
-.main-event-text:hover{
+.main-event-text:hover {
     color: #e1d719;
     filter: blur(15px);
     filter: drop-shadow(0 0 15px #0015ff);
@@ -102,24 +99,21 @@
 .register-button:hover {
     background-color: #2e4999;
 }
+/* End NavBar */
 
-/* End NavBares */
-
+/* Body */
 body {
     background-color: var(--bg-primary);
     font-family: 'Poppins', sans-serif;
     padding-top: 65px;
 }
 
-/* About Start */
-.text-about, .textoCard{
+/* About */
+.text-about, .textoCard {
     text-align: justify;
 }
 
-/* About End */
-
-/* Offer Start */
-
+/* Offer */
 .body-offer {
     background-color: var(--bg-offer);
 }
@@ -131,10 +125,16 @@ body {
     background-color: #101522;
 }
 
-/* Offer End */
+.card-body {
+    transition: 0.5s;
+}
 
-/* Form Start */
+.card-body:hover {
+    background-color: var(--bg-blue);    
+}
+/* End Offer */
 
+/* Form */
 .form-body {
     background-color: #161719;
     border: #40528A 1px solid;
@@ -144,11 +144,9 @@ body {
 .form-border input {
     border: 1px solid #46474F;
 }
-
-/* Form End */
+/* End Form */
 
 /* Back to Top */
-
 .back-to-top {
     position: fixed;
     display: none;

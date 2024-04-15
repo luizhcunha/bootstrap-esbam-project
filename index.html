@@ -37,7 +37,7 @@
 
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header"> <!-- Cabeçalho do offcanvas -->
-          <h5 class="offcanvas-title h2">EVEnts</h2>
+          <h5 class="offcanvas-title h2"><a href="#">EVEnts</a></h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
@@ -67,15 +67,22 @@
   <div class="container-fluid body-about">
     <div class="container p-3">
       <div class="container">
-        <h1 class="display-4 text-body-emphasis text-lg-start text-sm-center">Quem somos?</h1>
+        <h1 class="display-4 text-body-emphasis text-center text-lg-start text-sm-center">Quem somos?</h1>
       </div>
-      <div class="container d-lg-flex justify-content-end align-items-lg-center gap-5">
-        <p class="fs-4 text-about">Somos uma equipe apaixonada por eventos, dedicada a tornar suas celebrações e
-          reuniões verdadeiramente memoráveis.<br>Combinamos a nossa criatividade, profissionalismo e atenção aos
-          detalhes para
-          entregar experiências únicas e personalizadas para cada cliente.</p>
-        <img class="img-fluid mx-md-auto mx-sm-auto d-block img-about mb-3"
-          src="./assets/images/backgrounds/img-about.jpg" alt="section image 'quem somos'" width="320px" height="280px">
+      <div class="container d-lg-flex align-items-lg-center gap-5">
+        <section>
+          <p class="fs-4 text-about">Somos uma equipe apaixonada por eventos, dedicada a tornar suas celebrações e
+            reuniões verdadeiramente memoráveis.<br>
+          </p>
+          <p class="fs-4 text-about">Combinamos a nossa criatividade, profissionalismo e atenção aos
+            detalhes para
+            entregar experiências únicas e personalizadas para cada cliente.</p>
+        </section>
+        <img class="img-fluid mx-auto d-block img-about mb-3 rounded-2"
+          src="./assets/images/backgrounds/img-about.jpg" alt="section image 'quem somos'" width="320px" height="280px"
+          style="
+          filter: blur(15px);
+          filter: drop-shadow(0 0 15px #0015ff);">
       </div>
     </div>
   </div>
@@ -89,7 +96,7 @@
 
     <!-- Card Container Start -->
     <section class="container">
-      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 g-4 justify-content-center flex-wrap mh-100">
+      <div class="row service-item row-cols-lg-4 row-cols-md-2 row-cols-1 g-4 justify-content-center flex-wrap mh-100">
         <!-- Row -->
 
         <div class="col"> <!-- Imagem 1 -->
@@ -311,7 +318,7 @@
                   <label class="input-group-text">Adicione um <strong
                       class="mx-1 fw-normal text-decoration-underline">complemento</strong>:</label>
                   <input id="inputComplemento" class="form-control text-capitalize text-lg-center rounded-end-2"
-                    disabled data-input>
+                    disabled data-input maxlength="20">
                 </div>
               </div>
             </div> <!-- Fim do Formulario Caso Seja Presencial -->
@@ -325,12 +332,12 @@
 
             <div class="col-md-6"> <!-- Dia do Evento -->
               <label for="inputDate" class="form-label">Dia do Evento *</label>
-              <input type="date" class="form-control" id="inputDiaEvento" required>
+              <input type="date" class="form-control" id="inputDiaEvento" required min="">
             </div>
 
             <div class="col-md-6"> <!-- Hora do Evento -->
               <label for="inputHour" class="form-label">Hora do Evento *</label>
-              <input type="time" class="form-control" id="inputHoraEvento">
+              <input type="time" class="form-control" id="inputHoraEvento" min="08:00" max="00:00">
             </div>
 
             <legend class="mt-5">Informações Adicionais</legend>
@@ -342,13 +349,13 @@
 
             <div class="col-md-6">
               <label class="form-label">Tipo de evento</label>
-              <select class="form-select" required>
+              <select class="form-select" id="inputTipoEvento" required>
                 <option value="" disabled selected>Selecione o tipo de evento</option>
                 <option value="conferencia">Conferência</option>
                 <option value="workshop">Workshop</option>
                 <option value="palestra">Palestra</option>
                 <option value="exposicao">Exposição</option>
-                <option value="networking">Networking Event</option>
+                <option value="networking">Networking</option>
               </select>
             </div>
 
@@ -356,7 +363,7 @@
               <label class="form-label">Descrição do evento</label>
               <div class="form-floating">
                 <textarea class="form-control" placeholder="Descrição aqui" id="inputDescricaoEvento"
-                  style="height: 100px" minlength="20"></textarea>
+                  style="height: 100px" minlength="20" required></textarea>
                 <label for="floatingTextarea2">Insira aqui a descrição do evento</label>
               </div>
             </div>

@@ -11,6 +11,10 @@ const cidade = localStorage.getItem('cidade');
 const rua = localStorage.getItem('rua');
 const bairro = localStorage.getItem('bairro');
 const complemento = localStorage.getItem('complemento');
+const tipoEvento = localStorage.getItem('tipoEvento');
+const horarioEvento = localStorage.getItem('dataEvento')
+
+console.log(cep, horarioEvento);
 
 // Construir nome completo
 const nomeCompleto = `${nome} ${sobrenome}`;
@@ -27,6 +31,8 @@ const textoCidade = document.querySelector("#cidadeEvento");
 const textoRua = document.querySelector("#ruaEvento");
 const textoBairro = document.querySelector("#bairroEvento");
 const textoComplemento = document.querySelector("#complementoEvento");
+const textoHorario = document.querySelector("#horarioEvento")
+const textoTipoEvento = document.querySelector("#tipoEvento")
 
 // Inserir dados nos elementos HTML
 textoNomeEvento.innerHTML = nomeEvento;
@@ -40,3 +46,5 @@ textoCidade.value = cidade;
 textoRua.value = rua;
 textoBairro.value = bairro;
 textoComplemento.value = complemento;
+textoHorario.value = horarioEvento;
+textoTipoEvento.value = tipoEvento;

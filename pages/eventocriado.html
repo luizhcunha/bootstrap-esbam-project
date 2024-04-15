@@ -32,12 +32,14 @@
     <!-- Navbar Start -->
     <nav class="navbar navtop navbar-expand-md fixed-top">
         <div class="container-fluid sticky-top">
-            <img class="navbar-brand me-auto img-svg" src="../assets/images/logo-svg.svg" alt="" width="60" height="50">
-
+            <a href="../index.html">
+                <img class="navbar-brand me-auto img-svg" src="../assets/images/logo-svg.svg" alt="" width="60"
+                    height="50">
+            </a>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header"> <!-- Cabeçalho do offcanvas -->
-                    <h5 class="offcanvas-title h2">EVEnts</h2>
+                    <h5 class="offcanvas-title h2"><a href="../index.html">EVEnts</a></h2>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -70,13 +72,13 @@
                 <h1 class="display-4 text-body-emphasis text-lg-start text-sm-center" id="nomeEvento"></h1>
             </div>
             <div class="container d-lg-flex justify-content-end align-items-lg-center gap-5">
-                <p class="fs-1 text-about" id="descricaoEvento">Somos uma equipe apaixonada por eventos, dedicada a
+                <p class="fs-1 text-about " id="descricaoEvento">Somos uma equipe apaixonada por eventos, dedicada a
                     tornar suas celebrações e
                     reuniões verdadeiramente memoráveis.<br>Combinamos a nossa criatividade, profissionalismo e atenção
                     aos
                     detalhes para
                     entregar experiências únicas e personalizadas para cada cliente.</p>
-                <img class="img-fluid mx-md-auto mx-sm-auto d-block img-about mb-3"
+                <img class="img-fluid mx-md-auto mx-auto d-block img-about mb-3"
                     src="../assets/images/img-about-event.jpeg" alt="section image 'quem somos'" width="250px"
                     height="200px">
             </div>
@@ -153,64 +155,85 @@
 
                     <legend class="mt-4">Informações do Evento</legend>
 
+                    <div class="col-md-12">
+                        <label class="form-label">Qual será o tipo desse evento?</label>
+                        <input type="text" class="form-control bg-primary text-capitalize" id="tipoEvento">
+                    </div>
+
                     <div class="col-md-6">
                         <label for="inputTel" class="form-label">Por onde acontecerá o evento</label>
                         <input type="text" class="form-control bg-primary" value="Presencialmente!" disabled>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Em qual dia e hora acontecerá?</label>
+                        <input type="text" class="form-control bg-primary" id="horarioEvento">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Footer Start -->
+    <!-- Footer Start -->
 
-<footer class="container-fluid bg-dark footer pt-5">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-md-6 col-lg-3">
-          <img class="navbar-brand me-auto img-svg" src="../assets/images/logo-svg.svg" alt="" width="60" height="50">
-          <p class="text-white-50 pt-2">Transformando ideias em experiências memoráveis - EVEnts</p>
+    <footer class="container-fluid bg-dark footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3">
+                    <img class="navbar-brand me-auto img-svg" src="../assets/images/logo-svg.svg" alt="" width="60"
+                        height="50">
+                    <p class="text-white-50 pt-2">Transformando ideias em experiências memoráveis - EVEnts</p>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <h5>Nos contate!</h5>
+                    <p class="text-white-50">
+                        <i class="bi bi-geo-alt-fill me-3"></i>
+                        Manaus, AM - Brasil
+                    </p>
+
+                    <p class="text-white-50">
+                        <i class="bi bi-envelope-fill me-3"></i>
+                        <a href="#">Contato com o suporte.</a>
+                    </p>
+
+                    <p class="text-white-50">
+                        <i class="bi bi-github me-3"></i>
+                        <a style="text-decoration: none;" class="text-white-50"
+                            href="https://github.com/luizhcunha/bootstrap-esbam-project">Feito por Luiz Henrique</a>
+                    </p>
+                </div>
+
+
+
+                <div class="col-md-6 col-lg-3"">
+            <a href=" https://borgonove.tech/index.html" class="d-inline-block mb-3" target="_blank">
+                    <img src="../assets/images/logob9branco.png" width="220px" alt="logo b9 tech">
+                    </a>
+                    <p class="text-white-50 pt-2">Inovando para conectar o futuro: desenvolvemos soluções que
+                        transformam visões
+                        em realidade.</p>
+                </div>
+
+            </div>
         </div>
+    </footer> <!-- Footer End -->
 
-        <div class="col-md-6 col-lg-3">
-          <h5>Nos contate!</h5>
-          <p class="text-white-50">
-            <i class="bi bi-geo-alt-fill me-3"></i>
-            Manaus, AM - Brasil
-          </p>
-
-          <p class="text-white-50">
-            <i class="bi bi-envelope-fill me-3"></i>
-            <a href="#">Contato com o suporte.</a>
-          </p>
-
-          <p class="text-white-50">
-            <i class="bi bi-github me-3"></i>
-            <a style="text-decoration: none;" class="text-white-50"
-              href="https://github.com/luizhcunha/bootstrap-esbam-project">Feito por Luiz Henrique</a>
-          </p>
-        </div>
-
-
-
-        <div class="col-md-6 col-lg-3"">
-            <a href="https://borgonove.tech/index.html" class="d-inline-block mb-3" target="_blank">
-          <img src="../assets/images/logob9branco.png" width="220px" alt="logo b9 tech">
-          </a>
-          <p class="text-white-50 pt-2">Inovando para conectar o futuro: desenvolvemos soluções que transformam visões
-            em realidade.</p>
-        </div>
-
-      </div>
-    </div>
-  </footer> <!-- Footer End -->
-
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-outline-primary back-to-top pt-2" style="display: none;">
-    <i class="bi bi-chevron-double-up" "=""></i>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top pt-2" style="display: none;">
+        <i class="bi bi-chevron-double-up" "=""></i>
     Voltar ao Topo
   </a>
 
+  <!-- NÃO MEXER ABAIXO DISSO -->
+  <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+                integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+                crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 
 <script src="../src/eventocriado.js"></script>
