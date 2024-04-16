@@ -14,7 +14,6 @@
 <body>
 
   <!-- Spinners & Loaders -->
-
   <div class="hide" id="fade">
     <div class="spinner-border text-primary hide" id="loader" role="status">
       <span class="visually-hidden">Loading...</span>
@@ -38,13 +37,13 @@
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header"> <!-- Cabeçalho do offcanvas -->
           <h5 class="offcanvas-title h2"><a href="#" class="text-decoration-none text-primary">EVEnts</a></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body">
           <ul class="navbar-nav fs-4 justify-content-center flex-grow-1 pe-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Sobre nós</a>
+              <a class="nav-link active text-primary" aria-current="page" href="#">Sobre nós</a>
             </li>
             <li class="nav-item">
               <a class="nav-link main-event-text" id="btnMainEvent" href="./pages/eventocriado.html">Seu Evento</a>
@@ -78,9 +77,8 @@
             detalhes para
             entregar experiências únicas e personalizadas para cada cliente.</p>
         </section>
-        <img class="img-fluid mx-auto d-block img-about mb-3 rounded-2"
-          src="./assets/images/backgrounds/img-about.jpg" alt="section image 'quem somos'" width="320px" height="280px"
-          style="
+        <img class="img-fluid mx-auto d-block img-about mb-3 rounded-2" src="./assets/images/backgrounds/img-about.jpg"
+          alt="section image 'quem somos'" width="320px" height="280px" style="
           filter: blur(15px);
           filter: drop-shadow(0 0 15px #0015ff);">
       </div>
@@ -91,7 +89,7 @@
   <!-- "What we offer?" Start -->
   <div class="container-fluid body-offer">
     <div class="container-md p-3">
-      <h1 class="display-5 text-body-emphasis text-center">O que oferecemos?</h1>
+      <h1 class="display-5 text-white text-center">O que oferecemos?</h1>
     </div>
 
     <!-- Card Container Start -->
@@ -101,8 +99,7 @@
 
         <div class="col"> <!-- Imagem 1 -->
           <div class="card h-100">
-            <img src="./assets/images/offer-branding-img.jpeg" class="card-img-top"
-              alt="..." style="height: 250px;">
+            <img src="./assets/images/offer-branding-img.jpeg" class="card-img-top" alt="..." style="height: 250px;">
             <div class="card-body">
               <h5 class="card-title text-center">Personalização e Branding</h5>
               <p class="card-text mt-3 textoCard">Destaque sua identidade e impressione sua audiência com personalização
@@ -114,8 +111,7 @@
 
         <div class="col"> <!-- Imagem 2 -->
           <div class="card h-100">
-            <img src="./assets/images/offer-assistante-img.jpeg" class="card-img-top"
-              alt="..." style="height: 250px;">
+            <img src="./assets/images/offer-assistante-img.jpeg" class="card-img-top" alt="..." style="height: 250px;">
             <div class="card-body">
               <h5 class="card-title text-center">Suporte e Assistência 24/7</h5>
               <p class="card-text textoCard mt-3">Estamos aqui para ajudar em cada passo do seu evento. Conte com nosso
@@ -126,8 +122,7 @@
 
         <div class="col"> <!-- Imagem 3 -->
           <div class="card h-100">
-            <img src="./assets/images/offer-acessglobal-img.jpeg" class="card-img-top"
-              alt="..." style="height: 250px;">
+            <img src="./assets/images/offer-acessglobal-img.jpeg" class="card-img-top" alt="..." style="height: 250px;">
             <div class="card-body">
               <h5 class="card-title text-center">Acesso Global para você</h5>
               <p class="card-text mt-3 textoCard">Alcance o mundo inteiro e ofereça opções flexíveis de participação com
@@ -139,8 +134,7 @@
 
         <div class="col"> <!-- Imagem 4 -->
           <div class="card h-100">
-            <img src="./assets/images/offer-management-img.jpeg" class="card-img-top"
-              alt="..." style="height: 250px;">
+            <img src="./assets/images/offer-management-img.jpeg" class="card-img-top" alt="..." style="height: 250px;">
             <div class="card-body">
               <h5 class="card-title text-center">Fácil Gerenciamento</h5>
               <p class="card-text mt-3 textoCard">Facilite o planejamento e a execução de seus eventos com nossas
@@ -214,13 +208,13 @@
               <label for="" class="form-check-label">Onde acontecerá o evento?</label>
               <div class="form-check mt-2">
                 <input class="form-check-input" type="radio" name="checkLocalEvento"
-                  id="inputCheckLocalEventoPresencial" value="optionPresencial">
+                  id="inputCheckLocalEventoPresencial" value="optionPresencial" required>
                 <label class="form-check-label" class="">Presencial</label>
               </div>
 
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="checkLocalEvento" id="inputCheckLocalEventoOnline"
-                  value="optionOnline">
+                  value="optionOnline" required>
                 <label class="form-check-label">Online</label>
               </div>
             </div>
@@ -315,7 +309,8 @@
               <div class="col-md-6"> <!-- Input do Complemento -->
                 <label for="inputGroupCidade" class="form-label">Complemento do Local</label>
                 <div class="input-group mb-3">
-                  <label class="input-group-text">Seu <strong class="mx-1 fw-normal text-decoration-underline">complemento</strong>:</label>
+                  <label class="input-group-text">Seu <strong
+                      class="mx-1 fw-normal text-decoration-underline">complemento</strong>:</label>
                   <input id="inputComplemento" class="form-control text-capitalize text-lg-center rounded-end-2"
                     disabled data-input maxlength="20">
                 </div>
@@ -331,19 +326,20 @@
 
             <div class="col-md-6"> <!-- Dia do Evento -->
               <label for="inputDate" class="form-label">Dia do Evento *</label>
-              <input type="date" class="form-control" id="inputDiaEvento" required min="">
+              <input type="date" class="form-control" id="inputDiaEvento" required min="2024-04-15" max="2024-12-31">
             </div>
 
             <div class="col-md-6"> <!-- Hora do Evento -->
               <label for="inputHour" class="form-label">Hora do Evento *</label>
-              <input type="time" class="form-control" id="inputHoraEvento" min="08:00" max="00:00">
+              <input type="time" class="form-control" id="inputHoraEvento" min="08:00" max="18:00">
             </div>
 
             <legend class="mt-5">Informações Adicionais</legend>
 
             <div class="col-md-6">
               <label class="form-label">Nome do evento</label>
-              <input type="text" class="form-control" id="inputNomeEvento" placeholder="Nome do evento" max="10" required>
+              <input type="text" class="form-control" id="inputNomeEvento" placeholder="Nome do evento" max="10"
+                required>
             </div>
 
             <div class="col-md-6">
@@ -376,7 +372,6 @@
   </div> <!-- Form End -->
 
   <!-- Footer Start -->
-
   <footer class="container-fluid bg-dark footer pt-5">
     <div class="container py-5">
       <div class="row g-5">
@@ -404,14 +399,19 @@
           </p>
         </div>
 
-
-
         <div class="col-md-6 col-lg-3"">
             <a href=" https://borgonove.tech/index.html" class="d-inline-block mb-3" target="_blank">
           <img src="./assets/images/logob9branco.png" width="220px" alt="logo b9 tech">
           </a>
           <p class="text-white-50 pt-2">Inovando para conectar o futuro: desenvolvemos soluções que transformam visões
             em realidade.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-1"">
+          <a href=" https://esbam.edu.br/" class="d-inline-block mb-3" target="_blank">
+          <img src="https://images.educamaisbrasil.com.br/content/superior/instituicao/logo/g/esbam.png" width="150px"
+            alt="logo b9 tech">
+          </a>
         </div>
 
       </div>
@@ -423,7 +423,7 @@
     <i class="bi bi-chevron-double-up" "=""></i>
     Voltar ao Topo
   </a>
-
+  <!-- Back to Top End -->
 
 
   <!-- NÃO MEXER ABAIXO DISSO -->
@@ -436,6 +436,7 @@
       <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
+
 <script src="./src/index.js"></script>
 
 </html>

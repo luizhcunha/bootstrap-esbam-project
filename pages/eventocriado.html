@@ -13,7 +13,6 @@
 
 <body>
     <!-- Spinners & Loaders -->
-
     <div class="hide" id="fade">
         <div class="spinner-border text-primary hide" id="loader" role="status">
             <span class="visually-hidden">Loading...</span>
@@ -39,7 +38,8 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header"> <!-- Cabeçalho do offcanvas -->
-                    <h5 class="offcanvas-title h2"><a href="../index.html">EVEnts</a></h2>
+                    <h5 class="offcanvas-title h2"><a href="../index.html"
+                            class="text-decoration-none text-primary">EVEnts</a></h2>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -49,7 +49,7 @@
                             <a class="nav-link" aria-current="page" href="../index.html">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link main-event-text active text-primary" href="#">Seu Evento!</a>
+                            <a class="nav-link main-event-text active text-primary" href="#">Seu Evento</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./listaEventos.html">Outros Eventos</a>
@@ -69,35 +69,37 @@
     <div class="container-fluid body-about">
         <div class="container p-3">
             <div class="container">
-                <h1 class="display-4 text-body-emphasis text-lg-start text-sm-center" id="nomeEvento"></h1>
+                <h1 class="display-4 text-body-emphasis text-center" id="nomeEvento"></h1>
             </div>
-            <div class="container d-lg-flex justify-content-end align-items-lg-center gap-5">
-                <p class="fs-3 text-about " id="descricaoEvento"></p>
+            <div class="container d-lg-flex justify-content-end align-items-lg-center gap-2">
+                <p class="fs-2 text-about" id="descricaoEvento"></p>
                 <img class="img-fluid mx-md-auto mx-auto d-block img-about mb-3"
                     src="../assets/images/img-about-event.jpeg" alt="section image 'quem somos'" width="250px"
-                    height="200px">
+                    height="200px" style="
+                    filter: blur(15px);
+                    filter: drop-shadow(0 0 15px #b03232);">
             </div>
         </div>
     </div>
     <!-- About Event End -->
 
+    <!-- Idealizador Body Start -->
     <div class="container-fluid body-form">
         <div class="container py-5 p-3 mh-100">
             <h1 class="display-3 text-body-emphasis mb-3 text-center">Idealizador(a) do Evento</h1>
-            <div class="card mx-auto" style="width: 20rem;">
+            <div class="card mx-auto" style="width: 25rem;">
                 <img src="../assets/images/idealizador.jpeg" class="card-img-top img-fluid" alt="..." width="250px"
                     height="200px">
                 <div class="card-body">
-                    <h1 class="card-title" id="idealizadorEvento"></h1>
-                    <p class="card-text">Uma pessoa muito gente boa e da curtição!</p>
+                    <h1 class="card-title text-center" id="idealizadorEvento"></h1>
+                    <p class="card-text text-center">Uma pessoa muito gente boa e da curtição!</p>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+    <!-- Idealizador Body End -->
 
     <!-- Location Event Presencial Start -->
-
     <div class="container-fluid bg-primary" id="container-location-presencial" hidden>
         <div class="container p-3">
             <div class="container">
@@ -167,9 +169,10 @@
                 </div>
             </div>
         </div>
-    </div> <!-- Location Event Presencial End -->
+    </div>
+    <!-- Location Event Presencial End -->
 
-    <!-- Location Event URL -->
+    <!-- Location Event URL Start -->
     <div class="container-fluid bg-primary" id="container-location-online" hidden>
         <div class="container p-3">
             <div class="container">
@@ -188,11 +191,9 @@
             </div>
         </div>
     </div>
-
-    <!--  -->
+    <!-- Location Event URL End -->
 
     <!-- Footer Start -->
-
     <footer class="container-fluid bg-dark footer pt-5">
         <div class="container py-5">
             <div class="row g-5">
@@ -221,26 +222,32 @@
                     </p>
                 </div>
 
-
-
                 <div class="col-md-6 col-lg-3"">
-            <a href=" https://borgonove.tech/index.html" class="d-inline-block mb-3" target="_blank">
+                <a href=" https://borgonove.tech/index.html" class="d-inline-block mb-3" target="_blank">
                     <img src="../assets/images/logob9branco.png" width="220px" alt="logo b9 tech">
                     </a>
-                    <p class="text-white-50 pt-2">Inovando para conectar o futuro: desenvolvemos soluções que
-                        transformam visões
-                        em realidade.</p>
+                    <p class="text-white-50 pt-2">
+                        Inovando para conectar o futuro: desenvolvemos soluções que
+                        transformam visões em realidade.</p>
+                </div>
+
+                <div class="col-md-6 col-lg-1"">
+                    <a href=" https://esbam.edu.br/" class="d-inline-block mb-3" target="_blank">
+                    <img src="https://images.educamaisbrasil.com.br/content/superior/instituicao/logo/g/esbam.png"
+                        width="150px" alt="logo b9 tech">
+                    </a>
                 </div>
 
             </div>
         </div>
-    </footer> <!-- Footer End -->
+    </footer>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-primary back-to-top pt-2" style="display: none;">
         <i class="bi bi-chevron-double-up" "=""></i>
     Voltar ao Topo
-  </a>
+    </a>
 
   <!-- NÃO MEXER ABAIXO DISSO -->
   <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

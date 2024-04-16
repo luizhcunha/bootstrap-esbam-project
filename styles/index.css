@@ -11,6 +11,8 @@
     --spinner-color: 
 }
 
+
+
 /*** Spinner & Loader ***/
 #fade {
     position: fixed;
@@ -118,6 +120,10 @@ body {
     text-align: justify;
 }
 
+.body-about {
+    background-color: #10242D;
+}
+
 /* Offer */
 .body-offer {
     background-color: var(--bg-offer);
@@ -131,11 +137,13 @@ body {
 }
 
 .card-body {
+    background-color: var(--bg-blue);
     transition: 0.5s;
 }
 
 .card-body:hover {
-    background-color: var(--bg-blue);    
+    color: var(--bg-offer);
+    background-color: #ebe6e6;    
 }
 /* End Offer */
 

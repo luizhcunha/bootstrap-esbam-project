@@ -236,8 +236,6 @@ addressForm.addEventListener("submit", function (e) {
     } else {
         const selecao = presencialInput.checked.toString();
         localStorage.setItem('checkInputPresencial', selecao);
-        
-        console.log("NÃO FOI SELECIONADO O PRESENCIAL")
         localStorage.setItem('urlEvento', inputurlEvento.value);
     }
 

@@ -12,6 +12,24 @@
 </head>
 
 <body>
+
+  <!-- Spinner&Loader Start -->
+  <div class="hide" id="fade">
+    <div class="spinner-border text-primary hide" id="loader" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="hide" id="message">
+      <div class="alert alert-light" role="alert">
+        <h4 class="text-center">Mensagem:</h4>
+        <p class="text-center">Texto da Mensagem...</p>
+        <button id="close-message" type="button" class="btn btn-primary col-md-12 col-sm-12">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Spinner&Loader End -->
+
   <!-- Navbar Start -->
   <nav class="navbar navtop navbar-expand-md fixed-top">
     <div class="container-fluid sticky-top">
@@ -20,7 +38,8 @@
       </a>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header"> <!-- Cabeçalho do offcanvas -->
-          <h5 class="offcanvas-title h2"><a href="../index.html">EVEnts</a></h5>
+          <h5 class="offcanvas-title h2"><a href="../index.html" class="text-decoration-none text-primary">EVEnts</a>
+          </h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
@@ -30,10 +49,10 @@
               <a class="nav-link" aria-current="page" href="../index.html">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link main-event-text" href="./eventocriado.html">Seu Evento</a>
+              <a class="nav-link main-event-text" href="./eventocriado.html" id="btnSeuEvento">Seu Evento</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Outros Eventos</a>
+              <a class="nav-link active text-primary" href="#">Outros Eventos</a>
             </li>
           </ul>
         </div>
@@ -47,7 +66,7 @@
   <!-- Navbar End -->
 
   <!-- Lista de Eventos Start -->
-  <div class="container-xl">
+  <div class="container-xl p-0">
     <div id="carouselEventos" class="carousel slide">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselEventos" data-bs-slide-to="0" class="active" aria-current="true"
@@ -97,18 +116,15 @@
   </div>
   <!-- Lista de Eventos End -->
 
+  <!-- Merchandising dos bons Start -->
   <div class="container-sm bg-secondary rounded-3 p-2 my-5">
     <h1 class="fs-5 text-body-emphasis text-center">Entre outros diversos eventos que também poderão ser mostrados aqui
       na EVEnts!</h1>
     <p class="fs-5 text-center">Venha você também!</p>
   </div>
-
-  <div class="container-md my-5">
-    <h1 class="fs-5 text-body-emphasis text-center"></h1>
-  </div>
+  <!-- Merchandising dos bons End -->
 
   <!-- Footer Start -->
-
   <footer class="container-fluid bg-dark footer pt-5">
     <div class="container py-5">
       <div class="row g-5">
@@ -144,6 +160,13 @@
             em realidade.</p>
         </div>
 
+        <div class="col-md-6 col-lg-1"">
+          <a href=" https://esbam.edu.br/" class="d-inline-block mb-3" target="_blank">
+          <img src="https://images.educamaisbrasil.com.br/content/superior/instituicao/logo/g/esbam.png" width="150px"
+            alt="logo b9 tech">
+          </a>
+        </div>
+
       </div>
     </div>
   </footer> <!-- Footer End -->
@@ -158,5 +181,31 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
+
+<!-- Lógica pra não deixar entrar no "SeuEvento" -->
+<script>
+  const toggleMessage = function (msg) {
+    const closeButton = document.querySelector("#close-message");
+    const fadeElement = document.querySelector("#fade");
+    const messageElement = document.querySelector('#message');
+    const messageElementText = document.querySelector('#message p');
+
+    messageElementText.innerText = msg;
+
+    messageElement.classList.toggle("hide");
+    fadeElement.classList.toggle("hide");
+  };
+
+  const btnSeuEvento = document.querySelector("#btnSeuEvento");
+
+  btnSeuEvento.addEventListener("click", function (e) {
+    e.preventDefault();
+    toggleMessage("Redirecionando para a criação da sua página...")
+
+    setTimeout(function () {
+      window.location.href = '../index.html';
+    }, 1500);
+  })
+</script>
 
 </html>
