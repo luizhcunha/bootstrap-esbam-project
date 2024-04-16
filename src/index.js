@@ -2,6 +2,8 @@
 const closeButton = document.querySelector("#close-message");
 const fadeElement = document.querySelector("#fade");
 const addressForm = document.querySelector("#address-form");
+const corpoForm = document.querySelector(".body-form");
+const btnMainEvent = document.querySelector("#btnMainEvent");
 
 // Inputs Form Declaration
 const inputCEP = document.getElementById("inputCEP");
@@ -69,6 +71,7 @@ function atualizarDataEvento() {
     localStorage.setItem('dataEvento', `${dataFormatada} às ${hora} horas (horário de ${inputEstado.value})`);
 }
 
+//
 
 // Evento para pegar o endereço
 inputCEP.addEventListener("keyup", function (e) {
@@ -120,6 +123,45 @@ const getAddress = async function (cep) {
     toggleLoader();
 };
 
+btnMainEvent.addEventListener("click", function (e){
+
+    const isAddressFormFilled = validateAddressForm();
+
+    if(isAddressFormFilled) {
+        console.log(inputCEP)
+        window.location.href = './pages/eventocriado.html';
+    }else {
+        e.preventDefault();
+        toggleMessage("Insira todos os dados para ir para o seu evento!");
+
+        corpoForm.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+})
+
+function validateAddressForm() {
+    // Verificar se todos os campos do formulário de endereço estão preenchidos
+    const inputCEP = document.getElementById("inputCEP").value;
+    const inputEstado = document.getElementById("inputEstado").value;
+    const inputCidade = document.getElementById("inputCidade").value;
+    const inputRua = document.getElementById("inputRua").value;
+    const inputBairro = document.getElementById("inputBairro").value;
+    const inputComplemento = document.getElementById("inputComplemento").value;
+
+    // Verificar se algum campo está vazio
+    if (
+        inputCEP === "" ||
+        inputEstado === "" ||
+        inputCidade === "" ||
+        inputRua === "" ||
+        inputBairro === "" ||
+        inputComplemento === ""
+    ) {
+        return false; // Algum campo está vazio
+    } else {
+        return true; // Todos os campos estão preenchidos
+    }
+}
+
 // Alternar campos do formulário entre habilitado e desabilitado
 const toggleDisabled = function () {
     if (inputEstado.hasAttribute("disabled")) {
@@ -162,26 +204,26 @@ addressForm.addEventListener("submit", function (e) {
     e.preventDefault();
     toggleLoader();
 
+    // Pegue os valores dos campos do formulário
+    const nome = document.getElementById('inputName') ? document.getElementById('inputName').value : '';
+    const sobrenome = document.getElementById('inputSurname') ? document.getElementById('inputSurname').value : '';
+    const email = document.getElementById('inputEmail') ? document.getElementById('inputEmail').value : '';
+    const telefone = document.getElementById('inputPhoneNumber') ? document.getElementById('inputPhoneNumber').value : '';
+    const nomeEvento = inputNomeEvento.value;
+    const descricaoEvento = inputDescricaoEvento.value;
+
     // Armazena os dados do evento na sessão da web
-    if (presencialInput.checked) {
-        // Pegue os valores dos campos do formulário
-        const nome = document.getElementById('inputName').value;
-        const sobrenome = document.getElementById('inputSurname').value;
-        const email = document.getElementById('inputEmail').value;
-        const telefone = document.getElementById('inputPhoneNumber').value;
+    localStorage.setItem('nome', nome);
+    localStorage.setItem('sobrenome', sobrenome);
+    localStorage.setItem('email', email);
+    localStorage.setItem('telefone', telefone);
+    localStorage.setItem('nomeEvento', nomeEvento);
+    localStorage.setItem('descricaoEvento', descricaoEvento);
+    localStorage.setItem('tipoEvento', inputTipoEvento.value);
 
-        const nomeEvento = inputNomeEvento.value;
-        const descricaoEvento = inputDescricaoEvento.value;
-
-        // Armazene os valores no Local Storage ou Session Storage
-        localStorage.setItem('nome', nome);
-        localStorage.setItem('sobrenome', sobrenome);
-        localStorage.setItem('email', email);
-        localStorage.setItem('telefone', telefone);
-
-        localStorage.setItem('nomeEvento', nomeEvento);
-        localStorage.setItem('descricaoEvento', descricaoEvento);
-        localStorage.setItem('tipoEvento', inputTipoEvento.value);
+    // Verifique se presencialInput está marcado
+    if (presencialInput.checked.toString() === "true") {
+        const selecao = presencialInput.checked.toString();
 
         localStorage.setItem('cep', inputCEP.value);
         localStorage.setItem('estado', inputEstado.value);
@@ -189,6 +231,14 @@ addressForm.addEventListener("submit", function (e) {
         localStorage.setItem('rua', inputRua.value);
         localStorage.setItem('bairro', inputBairro.value);
         localStorage.setItem('complemento', inputComplemento.value);
+        localStorage.setItem('checkInputPresencial', selecao);
+
+    } else {
+        const selecao = presencialInput.checked.toString();
+        localStorage.setItem('checkInputPresencial', selecao);
+        
+        console.log("NÃO FOI SELECIONADO O PRESENCIAL")
+        localStorage.setItem('urlEvento', inputurlEvento.value);
     }
 
     setTimeout(function () {
@@ -203,13 +253,24 @@ addressForm.addEventListener("submit", function (e) {
     }, 1500);
 });
 
+
 // Eventos de clique para selecionar entre Presencial e Online
 presencialInput.addEventListener("click", function () {
+    inputurlEvento.value = ' ';
+
     containerOnline.setAttribute("hidden", true);
     containerPresencial.removeAttribute("hidden", true);
 });
 
 onlineInput.addEventListener("click", function () {
+    inputCEP.value = ' ';
+    inputEstado.value = ' ';
+    inputCidade.value = ' ';
+    inputNRua.value = ' ';
+    inputRua.value = ' ';
+    inputBairro.value = ' ';
+    inputComplemento.value = ' ';
+
     containerPresencial.setAttribute("hidden", true);
     containerOnline.removeAttribute("hidden", true);
 });

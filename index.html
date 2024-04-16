@@ -21,9 +21,9 @@
     </div>
     <div class="hide" id="message">
       <div class="alert alert-light" role="alert">
-        <h4>Mensagem:</h4>
-        <p>Texto da Mensagem...</p>
-        <button id="close-message" type="button" class="btn btn-primary">
+        <h4 class="text-center">Mensagem:</h4>
+        <p class="text-center">Texto da Mensagem...</p>
+        <button id="close-message" type="button" class="btn btn-primary col-md-12 col-sm-12">
           Fechar
         </button>
       </div>
@@ -37,7 +37,7 @@
 
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header"> <!-- Cabeçalho do offcanvas -->
-          <h5 class="offcanvas-title h2"><a href="#">EVEnts</a></h5>
+          <h5 class="offcanvas-title h2"><a href="#" class="text-decoration-none text-primary">EVEnts</a></h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
@@ -47,7 +47,7 @@
               <a class="nav-link active" aria-current="page" href="#">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link main-event-text" id="btnMainEvent" href="./pages/eventocriado.html">Evento Principal</a>
+              <a class="nav-link main-event-text" id="btnMainEvent" href="./pages/eventocriado.html">Seu Evento</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./pages/listaEventos.html">Outros Eventos</a>
@@ -220,7 +220,7 @@
 
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="checkLocalEvento" id="inputCheckLocalEventoOnline"
-                  value="optionOnline" disabled>
+                  value="optionOnline">
                 <label class="form-check-label">Online</label>
               </div>
             </div>
@@ -282,7 +282,7 @@
                 </div>
               </div>
 
-              <div class="col-md-8"> <!-- Input da Rua -->
+              <div class="col-md-6"> <!-- Input da Rua -->
                 <label for="inputGroupCidade" class="form-label">Rua do Evento</label>
                 <div class="input-group mb-3">
                   <label class="input-group-text">Em qual <strong
@@ -292,8 +292,8 @@
                 </div>
               </div>
 
-              <div class="col-md-4"> <!-- Input do Bairro -->
-                <label for="inputGroupCidade" class="form-label">Nº da Rua</label>
+              <div class="col-md-6"> <!-- Input do Bairro -->
+                <label for="inputGroupCidade" class="form-label">Nº do Local</label>
                 <div class="input-group mb-3">
                   <label class="input-group-text">Qual o<strong
                       class="mx-1 fw-normal text-decoration-underline">Nº</strong>:</label>
@@ -315,8 +315,7 @@
               <div class="col-md-6"> <!-- Input do Complemento -->
                 <label for="inputGroupCidade" class="form-label">Complemento do Local</label>
                 <div class="input-group mb-3">
-                  <label class="input-group-text">Adicione um <strong
-                      class="mx-1 fw-normal text-decoration-underline">complemento</strong>:</label>
+                  <label class="input-group-text">Seu <strong class="mx-1 fw-normal text-decoration-underline">complemento</strong>:</label>
                   <input id="inputComplemento" class="form-control text-capitalize text-lg-center rounded-end-2"
                     disabled data-input maxlength="20">
                 </div>

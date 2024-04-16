@@ -35,8 +35,13 @@
 }
 
 #message {
-    width: 30%;
+    width: 50%;
 }
+
+#message p {
+    text-align: center;
+}
+
 
 .alert.alert-light p {
     border-bottom: 1px solid #333;

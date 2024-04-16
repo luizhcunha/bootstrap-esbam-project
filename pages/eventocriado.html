@@ -49,7 +49,7 @@
                             <a class="nav-link" aria-current="page" href="../index.html">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link main-event-text active" href="#">Evento Principal</a>
+                            <a class="nav-link main-event-text active text-primary" href="#">Seu Evento!</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./listaEventos.html">Outros Eventos</a>
@@ -72,12 +72,7 @@
                 <h1 class="display-4 text-body-emphasis text-lg-start text-sm-center" id="nomeEvento"></h1>
             </div>
             <div class="container d-lg-flex justify-content-end align-items-lg-center gap-5">
-                <p class="fs-1 text-about " id="descricaoEvento">Somos uma equipe apaixonada por eventos, dedicada a
-                    tornar suas celebrações e
-                    reuniões verdadeiramente memoráveis.<br>Combinamos a nossa criatividade, profissionalismo e atenção
-                    aos
-                    detalhes para
-                    entregar experiências únicas e personalizadas para cada cliente.</p>
+                <p class="fs-3 text-about " id="descricaoEvento"></p>
                 <img class="img-fluid mx-md-auto mx-auto d-block img-about mb-3"
                     src="../assets/images/img-about-event.jpeg" alt="section image 'quem somos'" width="250px"
                     height="200px">
@@ -101,9 +96,9 @@
     </div>
     </div>
 
-    <!-- Location Event Start -->
+    <!-- Location Event Presencial Start -->
 
-    <div class="container-fluid bg-primary">
+    <div class="container-fluid bg-primary" id="container-location-presencial" hidden>
         <div class="container p-3">
             <div class="container">
                 <h1 class="display-3 text-body-emphasis text-center">Localização do Evento</h1>
@@ -172,7 +167,29 @@
                 </div>
             </div>
         </div>
+    </div> <!-- Location Event Presencial End -->
+
+    <!-- Location Event URL -->
+    <div class="container-fluid bg-primary" id="container-location-online" hidden>
+        <div class="container p-3">
+            <div class="container">
+                <h1 class="display-3 text-body-emphasis text-center">Localização do Evento</h1>
+            </div>
+
+            <div class="form-body p-3 rounded-3 pb-5">
+                <legend class="mt-2 text-center">Localização do Evento</legend>
+                <div class="row g-3">
+                    <div class="col-md-12">
+                        <label class="form-label">A localização do Evento será online!</label>
+                        <span class="form-control"><a class="text-decoration-none text-primary" href="" target="_blank"
+                                id="localizacaoURL"></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!--  -->
 
     <!-- Footer Start -->
 
@@ -236,6 +253,6 @@
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 
-<script src="../src/eventocriado.js"></script>
+<script src="../src/eventGetterSetter.js"></script>
 
 </html>
